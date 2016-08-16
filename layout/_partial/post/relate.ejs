@@ -1,12 +1,11 @@
 <section id = "relate">
-    <%
+    <% 
         var baidu_tuijian_id;
-        if(site.data.config.baidu_tuijian_id){
-            baidu_tuijian_id = site.data.config.baidu_tuijian_id;
+        if(config.baidu_tuijian_id){
+            baidu_tuijian_id = config.baidu_tuijian_id;
         }else{
             baidu_tuijian_id = theme.baidu_tuijian_id;
-        }
-    %>
+        } %>
 	<% if (theme.relate_provider == 'baidu_tuijian'){ %>
               <div id="<%= baidu_tuijian_id %>"></div>
 	<% } else if(theme.relate_provider == 'wumii'){%>

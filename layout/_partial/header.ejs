@@ -1,8 +1,22 @@
+<%
+function root_for(path){
+    path = path || '/'
+    var root = config.root;
+    if (path.substring(0, root.length) !== root){
+    if (path.substring(0, 1) === '/'){
+      path = root.substring(0, root.length - 1) + path;
+    } else {
+      path = root + path;
+    }
+  }
+  return path;
+}
+%>
 <div class= "header-content inner">
 	<div class = "alignleft col-one">
 		<% if (theme.avatar) { %>
 			<div class='avatar'>
-				<img src = "<%= theme.avatar %>">
+				<img src = "<%= root_for(theme.avatar) %>">
               </div>
 		<% } %>
 		<div class="header-div">
@@ -13,7 +27,7 @@
 	<div class = "alignright col-two">
 		<% if (theme.ad){ %>
             <div class="ad">
-			<img src = "<%= theme.ad %>">
+			<img src = "<%= root_for(theme.ad) %>">
             </div>
 		<% } %>
 	</div>
@@ -25,14 +39,14 @@
 		<div id="main-nav" class="alignleft">
 			<ul>
 		    		<% for (var i in theme.menu){ %>
-		    		  <li><a href="<%- theme.menu[i] %>"><%= i %></a></li>
+		    		  <li><a href="<%- root_for(theme.menu[i]) %>"><%= i %></a></li>
 		    		<% } %>
 		    	</ul>
 		</div>
 		<div id="sub-nav" class="alignright">
      	 <ul>
 		    <% for (var i in theme.submenu){ %>
-		      <li><a href="<%- theme.submenu[i] %>"><%= i %></a></li>
+		      <li><a href="<%- root_for(theme.submenu[i]) %>"><%= i %></a></li>
 		    <% } %>
      	 </ul>
 		</div>
