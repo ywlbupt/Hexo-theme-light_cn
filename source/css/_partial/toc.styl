@@ -1,36 +1,95 @@
-.toc-article {
-	background: #eee;
-	padding: 1em;
-	position: relative;
-	left:2em;
-}
+/* .toc-article { */
+/* 	background: #eee; */
+/* 	padding: 1em; */
+/* 	position: relative; */
+/* 	left:2em; */
+/* } */
  
 .toc-article .toc-title{
 	padding-bottom: 0.8em;
 	font-weight: bold;
 }
  
-#toc {
-	line-height: 1.1em;
-	font-size: 0.8em;
-	float: right;
-	@media screen and (max-width: 600px){
-		display: none;
-	}
-}
+/* #toc { */
+/* 	line-height: 1.1em; */
+/* 	font-size: 0.8em; */
+/* 	float: right; */
+/* 	@media screen and (max-width: 600px){ */
+/* 		display: none; */
+/* 	} */
+/* } */
  
-#toc .toc {
-	padding: 0
-}
+/* #toc .toc { */
+/* 	padding: 0 */
+/* } */
  
-#toc li , .toc li {
-	list-style-type: none
-}
+/* #toc li , .toc li { */
+/* 	list-style-type: none */
+/* } */
  
-#toc ol {
-	margin: 0;
-}
+/* #toc ol { */
+/* 	margin: 0; */
+/* } */
  
-#toc .toc-child {
-	padding-left: 1.5em
-}
+/* #toc .toc-child { */
+/* 	padding-left: 1.5em */
+/* } */
+
+.openaside
+  display none
+  position fixed
+  right 5%
+  top 260px
+  a
+    display block
+    color color-white
+    border 1px solid color-white
+    border-radius 5px
+    background color-theme
+    padding 0.2em 0.55em
+    &::before
+      font-family: FontAwesome;
+      /* font-family font-icon-family */
+      /* font-smoothing() */
+      content :  "\f0c9"
+
+#toc
+  line-height 1.3em
+  font-size 0.8em
+  float right
+  .toc
+    padding 0 
+    li
+      list-style-type none
+  .toc-child 
+    /* 修改缩进 */
+    /* padding-left 1.5em */
+    padding-top 0
+
+#toc.toc-aside
+  /* display none */
+  position fixed
+  width 20%
+  right 5%
+  /* left 2% */ 
+  top 260px
+  background: #eee;
+  overflow hidden
+  line-height 1.5em
+  font-size 1em
+  color color-heading
+  opacity .6
+  transition opacity 1s ease-out
+  strong
+    padding 0.3em 0
+    color color-font
+  /* &:hover */
+  /*   transition opacity .3s ease-out */
+  /*   opacity 1 */
+  a
+    transition color 1s ease-out
+    /* &:hover */
+    /*   color color-theme */
+    /*   transition color .3s ease-out */
+.active
+  color color-theme !important

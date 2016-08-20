@@ -1,4 +1,24 @@
+//button
+
+.closeaside
+  display none
+  a
+    color color-theme
+    &:hover
+      color color-blue
+    &::before
+      font-family: FontAwesome;
+      /* font-family font-icon-family */
+      /* font-smoothing() */
+      content "\f0c9"
+  @media tablet
+    display block
+    position absolute
+    right 25px
+    top 22px
+
 #sidebar
+  display none
   width 270px
   line-height 1.8em
   @media screen and (max-width: 800px)
@@ -95,3 +115,4 @@
     a
       margin-right 10px
       display inline-block
+

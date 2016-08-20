@@ -59,3 +59,8 @@ language: zh-CN
 calendar:
   language: zh-CN
   root: calendar
+
+#### Toc
+toc:
+  article: true   ## show contents in article.
+  aside: true     ## show contents in aside.
