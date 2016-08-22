@@ -1,11 +1,12 @@
 //button
 
 .closeaside
-  display none
+  /* display none */
   a
-    color color-theme
+    display block
+    border-radius 5px
+    padding 0.2em 0.55em
     &:hover
-      color color-blue
     &::before
       font-family: FontAwesome;
       /* font-family font-icon-family */
@@ -18,9 +19,9 @@
     top 22px
 
 #sidebar
-  display none
+  /* display none */
   width 270px
-  line-height 1.8em
+  line-height 1.5em
   @media screen and (max-width: 800px)
     float none
     width 100%

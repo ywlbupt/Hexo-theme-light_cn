@@ -5,10 +5,6 @@
 /* 	left:2em; */
 /* } */
  
-.toc-article .toc-title{
-	padding-bottom: 0.8em;
-	font-weight: bold;
-}
  
 /* #toc { */
 /* 	line-height: 1.1em; */
@@ -38,14 +34,12 @@
 .openaside
   display none
   position fixed
+  z-index 2
   right 5%
   top 260px
   a
     display block
-    color color-white
-    border 1px solid color-white
     border-radius 5px
-    background color-theme
     padding 0.2em 0.55em
     &::before
       font-family: FontAwesome;
@@ -63,23 +57,26 @@
       list-style-type none
   .toc-child 
     /* 修改缩进 */
-    /* padding-left 1.5em */
-    padding-top 0
+    padding-left 2em
 
 #toc.toc-aside
-  /* display none */
+  display none
   position fixed
+  z-index 1
   width 20%
   right 5%
   /* left 2% */ 
   top 260px
-  background: #eee;
   overflow hidden
   line-height 1.5em
   font-size 1em
   color color-heading
   opacity .6
   transition opacity 1s ease-out
+  .toc-article .toc-title
+      padding-bottom 0.8em
+      font-weight bold
+    
   strong
     padding 0.3em 0
     color color-font

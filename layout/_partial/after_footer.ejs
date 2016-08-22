@@ -47,12 +47,15 @@ $(document).ready(function(){
       a = $('#sidebar'),
       c = $('.closeaside'),
       o = $('.openaside');
+      t = $('#toc.toc-aside')
   c.click(function(){
     a.addClass('fadeOut').css('display', 'none');
     o.css('display', 'block').addClass('fadeIn');
+    // t.css('display', 'block').addClass('fadeIn');
   });
   o.click(function(){
     o.css('display', 'none').removeClass('beforeFadeIn');
+    t.css('display', 'none').removeClass('beforeFadeIn');
     a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
   });
   <% if (is_post() && theme.close_aside) { %>
@@ -98,9 +101,9 @@ $(document).ready(function(){
   o.click(function(){
     ta.css('display', 'none');
   });
-  $(window).scroll(function(){
-    ta.css("top",Math.max(140,320-$(this).scrollTop()));
-  });
+  // $(window).scroll(function(){
+    // ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  // });
 });
 </script>
 <% } %>

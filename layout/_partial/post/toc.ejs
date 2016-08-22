@@ -1,7 +1,6 @@
 <div class="openaside"><a class="navbutton" href="#" title="显示目录"></a></div>
-<!-- <div id="toc" class="toc-article"> -->
 <div id="toc" class="toc-aside">
-	<!-- <div class="toc-title">目录</div> -->
   <strong class="toc-title"> 目录 </strong>
-	<%- toc(item.content, {list_number: true}) %>
+  <strong class="toc-title"> <%= page.layout %> </strong>
+<%- toc(item.content, {list_number: true}) %>
 </div>
